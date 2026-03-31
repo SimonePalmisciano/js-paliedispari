@@ -6,7 +6,7 @@ let stringaInvertita = ''; // qui invertiamo la parola inserita dall'utente
 
 // while (typeof(parolaUtente) !== 'string' || parolaUtente === '') { // volevo fare un controllo se la stringa
 //     console.log('mi dispiace non hai inserito una stringa');       // fosse vuota rifarei il controllo
-    
+
 // }
 
 function invertiParola() { //funzione che inverte le parole di una stringa
@@ -21,11 +21,15 @@ function invertiParola() { //funzione che inverte le parole di una stringa
     }
 }
 
-if (parolaUtente === stringaInvertita) { // questo if controlla che la parola dell'utente sia palindroma
-    console.log(`bravo ${stringaInvertita} è una parola palindroma`);
+function isPalindroma() { // funziona che controlla se una parola è palindroma
 
-} else {
-    console.log(`mi dispiace ${parolaUtente} non è palindroma`);
+    if (parolaUtente === stringaInvertita) { // questo if controlla che la parola dell'utente sia palindroma
+        console.log(`bravo ${stringaInvertita} è una parola palindroma`);
+
+    } else {
+        console.log(`mi dispiace ${parolaUtente} non è palindroma`);
+
+    }
 
 }
 
@@ -34,29 +38,33 @@ if (parolaUtente === stringaInvertita) { // questo if controlla che la parola de
 // numero pari e dispari
 /////////////////////////////////////////////////////////////
 
-// let numeroGiocatore = 0;
-// let numeroComputer = 0;
 
-// let pariDispariGiocatore = prompt('scegli: PARI o DISPARI').toUpperCase;
+// l'utente deve scegliere se pari o dispari 
+let pariDispariGiocatore = prompt('scegli: PARI o DISPARI').toUpperCase;
 
-// if (pariDispariGiocatore === 'PARI') {
-//     let sceltaPari = prompt('scegli un numero tra: 2 e 4')
+// utente deve scegliere un numero da 1 a 5
+numeroGiocatore = Number(prompt('scegli un numero da 1 a 5'));
 
-//     if (sceltaPari % 2 === 0) {
-//         console.log('');
+// il computer genera un numero da 1 a 5 in modo casuale
+numeroComputer = Math.floor(Math.random() * 5 + 1);
 
-//     } else {
-//         console.log('inserisci un numero PARI');
+// qui i numeri scelti dai partecipanti si sommeranno
+let somma = numeroGiocatore + numeroComputer;
 
-//     }
-// }
+console.log(numeroGiocatore);
+console.log(numeroComputer);
+console.log(somma);
 
-// for (let z = 0; z < array.length; z++) {
-//     const element = array[z];
 
-// }
-// numeroGiocatore = Number(prompt('scegli un numero'));
+if (pariDispariGiocatore === 'PARI') {
 
-// numeroComputer = Math.floor(Math.random() * 5 + 1);
+    if (sceltaPari % 2 === 0) {
+        console.log('');
 
-// console.log(numeroComputer);
+    } else {
+        console.log('inserisci un numero PARI');
+
+    }
+}
+
+
