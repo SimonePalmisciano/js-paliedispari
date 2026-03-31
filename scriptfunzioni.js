@@ -9,7 +9,7 @@ let stringaInvertita = ''; // qui invertiamo la parola inserita dall'utente
 
 // }
 
-//funzione che inverte le parole di una stringa
+function invertiParola() { //funzione che inverte le parole di una stringa
 
     for (let z = parolaUtente.length - 1; z >= 0; z--) { // questo ciclo for si occupa di prendedere
         //dall'ultima lettera della parola dell'utente alla prima
@@ -19,9 +19,9 @@ let stringaInvertita = ''; // qui invertiamo la parola inserita dall'utente
         stringaInvertita += carattere; // e qui viene inserita nella stringaInvertita lettera per lettera
 
     }
+}
 
-
- // funziona che controlla se una parola è palindroma
+function isPalindroma() { // funziona che controlla se una parola è palindroma
 
     if (parolaUtente === stringaInvertita) { // questo if controlla che la parola dell'utente sia palindroma
         console.log(`bravo ${stringaInvertita} è una parola palindroma`);
@@ -31,7 +31,7 @@ let stringaInvertita = ''; // qui invertiamo la parola inserita dall'utente
 
     }
 
-
+}
 
 
 /////////////////////////////////////////////////////////////
@@ -55,6 +55,8 @@ console.log(numeroGiocatore);
 console.log(numeroComputer);
 console.log(somma);
 
+function controlloPariDispari() {
+
     if (pariDispariGiocatore === 'PARI' && somma % 2 === 0) {
         console.log('complimenti hai vinto con il PARI');
 
@@ -65,3 +67,5 @@ console.log(somma);
         console.error('HAI PERSO');
 
     }
+
+}
